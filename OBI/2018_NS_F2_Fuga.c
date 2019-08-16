@@ -21,7 +21,7 @@ int main(int argc, char const *argv[]){
     nLine += 2;
     nColumn += 2;
     
-    /* Inicialização tabuleiro */
+    /* InicializaÃ§Ã£o tabuleiro */
     for (i = 0; i < nLine; i++){
         for (j = 0; j < nColumn ; j++){
             if (i == 0 || i == nLine - 1 || j == 0 || j == nColumn - 1)
@@ -61,7 +61,7 @@ void printBoard(int nLine, int nColumn){
 
 void generateRoad(int yStart, int xStart, int yEnd, int xEnd, int nLine, int nColumn, int sum){
     /* Ver processo em tempo real*/
-    liveProcess(0, nLine + 1, nColumn + 1);
+    //liveProcess(0, nLine + 1, nColumn + 1);
 
     if (yStart == yEnd && xStart == xEnd){
         if (sum > best)
@@ -72,7 +72,7 @@ void generateRoad(int yStart, int xStart, int yEnd, int xEnd, int nLine, int nCo
     char temp[4];
     int i, j;
 
-    /* Backup do estado da vizinhança: em volta da posição atual */
+    /* Backup do estado da vizinhanÃ§a: em volta da posiÃ§Ã£o atual */
     for (i = 0; i < 4; i++)
         temp[i] = board[yStart + directionY[i]][xStart + directionX[i]];
     
@@ -80,7 +80,7 @@ void generateRoad(int yStart, int xStart, int yEnd, int xEnd, int nLine, int nCo
     for (i = 0; i < 4; i++){
         if (board[yStart + directionY[i]][xStart + directionX[i]] == '.'){
 
-            /* Alterando o estado da vizinhança para visitado*/
+            /* Alterando o estado da vizinhanÃ§a para visitado*/
             for (j = 0; j < 4; j++)
                 if(board[yStart + directionY[j]][xStart + directionX[j]] != '@')
                     board[yStart + directionY[j]][xStart + directionX[j]] = '#';

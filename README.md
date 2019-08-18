@@ -1,2 +1,2 @@
 ## Competicoes
-TheHuxley, URI Online Judge
+OBI, TheHuxley, URI Online Judge
